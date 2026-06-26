@@ -1,0 +1,13 @@
+.offer-strip {
+  text-align: center;
+  background: linear-gradient(90deg, #d8f5cb, #c7e5fa);
+  padding: 1.1rem;
+  font-size: 1.6rem;
+  color: #111;
+}
+.offer-strip s {
+  color: #6b7b7b;
+}
+.offer-strip strong {
+  font-weight: 900;
+}
