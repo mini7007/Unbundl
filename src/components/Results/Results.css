@@ -1,16 +1,16 @@
 .section {
-  padding: 6.4rem 0;
+  padding: var(--space-10) 0;
 }
 .section-soft {
   background: var(--blue);
-  padding: 7rem 0;
+  padding: var(--space-10) 0;
 }
 .intro__grid,
 .difference__grid,
 .doctor__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: var(--space-9);
   align-items: center;
 }
 .intro h2,
@@ -19,18 +19,19 @@
 .doctor h2 {
   font-size: clamp(3rem, 4vw, 4.2rem);
   line-height: 1.05;
-  margin: 0 0 2.4rem;
+  margin: 0 0 var(--space-6);
 }
 .intro p,
 .difference p,
 .steps p,
 .doctor p {
-  line-height: 1.55;
+  line-height: 1.62;
+  color: var(--color-text);
 }
 .price-card {
   background: #fff;
-  border-radius: 1.6rem;
-  padding: 2.4rem;
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
   box-shadow: var(--shadow);
   position: relative;
 }
@@ -39,7 +40,7 @@
   right: 2rem;
   top: 2rem;
   width: 11rem;
-  height: 11rem;
+  height: 13.6rem;
   object-fit: contain;
 }
 .price-card h3 {
@@ -58,12 +59,12 @@
 .smilers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2.2rem;
+  gap: var(--space-6);
 }
 .result-card,
 .why-card {
-  border-radius: 0.9rem;
-  background: #eef8ff;
+  border-radius: var(--radius-md);
+  background: var(--color-soft-blue);
   overflow: hidden;
   transition:
     transform 0.2s ease,
@@ -76,7 +77,7 @@
 }
 .result-card img {
   width: 100%;
-  height: 11rem;
+  height: 13.6rem;
   object-fit: cover;
 }
 .result-card__split {
@@ -96,10 +97,10 @@
   margin: 0;
 }
 .why-card {
-  background: #eaf6ff;
+  background: var(--color-soft-blue-2);
 }
 .why-image {
-  height: 18rem;
+  height: 20rem;
   background: linear-gradient(135deg, #bfe6ff, #fff);
 }
 .why-image--1 {
@@ -117,13 +118,13 @@
 }
 .difference__panel {
   background: #fff;
-  border-radius: 1.8rem;
-  padding: 4rem;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
 }
 .difference__panel article {
   display: flex;
-  gap: 2rem;
-  margin: 2.4rem 0;
+  gap: var(--space-5);
+  margin: var(--space-6) 0;
 }
 .difference__panel span {
   font-size: 3rem;
@@ -131,8 +132,8 @@
 .lab-image,
 .video-card,
 .doctor-image {
-  min-height: 36rem;
-  border-radius: 1.6rem;
+  min-height: 37rem;
+  border-radius: var(--radius-lg);
   background: linear-gradient(135deg, #d4dce2, #fff 35%, #9cc5d8);
   box-shadow: var(--shadow);
 }
@@ -140,7 +141,7 @@
   max-width: 72rem;
   margin: auto;
   border: 1px solid #ddd;
-  border-radius: 1.4rem;
+  border-radius: var(--radius-lg);
   overflow: hidden;
 }
 .compare__row {
@@ -149,11 +150,11 @@
   min-height: 6.4rem;
 }
 .compare__row > * {
-  padding: 1.8rem;
+  padding: 1.8rem 2rem;
   border-bottom: 1px solid #eee;
 }
 .compare__row > :nth-child(2) {
-  background: #eaf6ff;
+  background: var(--color-soft-blue-2);
   text-align: center;
 }
 .compare__row > :nth-child(3) {
@@ -164,16 +165,16 @@
 }
 .steps__card {
   background: #fff;
-  border-radius: 1.8rem;
-  padding: 5rem;
+  border-radius: var(--radius-lg);
+  padding: var(--space-9);
   display: grid;
   grid-template-columns: 1.3fr 0.8fr;
-  gap: 5rem;
+  gap: var(--space-9);
 }
 .steps__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.8rem;
+  gap: var(--space-7);
 }
 .steps article {
   display: flex;
@@ -218,8 +219,8 @@
 .smilers article {
   background: var(--purple);
   color: #fff;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
   text-align: center;
   box-shadow: var(--shadow);
 }
@@ -277,4 +278,35 @@
   .doctor-image {
     min-height: 24rem;
   }
+}
+.intro p,
+.difference p,
+.steps p,
+.doctor p { margin: 0 0 var(--space-4); }
+.price-card h3 { margin: 0 0 var(--space-6); line-height: 1.15; }
+.price-card s { display: inline-block; color: var(--color-muted); margin-bottom: var(--space-1); }
+.price-card small { display: block; color: var(--color-muted); margin-top: var(--space-1); }
+.price-card ul { padding-left: 2rem; margin: var(--space-5) 0; }
+.price-card a { color: var(--color-purple-700); font-weight: 800; text-decoration-thickness: 0.12em; text-underline-offset: 0.25em; }
+.result-card, .why-card { box-shadow: 0 1px 0 rgba(24, 33, 36, 0.04); }
+.result-card__split { padding: var(--space-2) var(--space-4) 0; color: var(--color-muted); font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
+.result-card dl { margin: 0; }
+.why-card h3 { margin: var(--space-5) 0 var(--space-2); font-size: var(--font-lg); line-height: 1.2; }
+.why-card p { margin: 0 0 var(--space-5); color: var(--color-text); line-height: 1.55; }
+.difference__panel h3, .steps h3 { margin: 0 0 var(--space-2); line-height: 1.2; }
+.difference__panel p, .steps p { margin: 0; }
+.compare { box-shadow: var(--shadow-sm); }
+.compare__row:last-child > * { border-bottom: 0; }
+.steps__card { box-shadow: var(--shadow-sm); }
+.video-card button { cursor: pointer; transition: transform 0.2s ease, background-color 0.2s ease; }
+.video-card button:hover { transform: scale(1.06); background: rgba(255, 255, 255, 0.48); }
+.smilers article { overflow: hidden; }
+.smilers strong { display: block; padding: var(--space-3) var(--space-2); font-size: var(--font-xs); letter-spacing: 0.08em; }
+@media (max-width: 900px) {
+  .intro__grid, .difference__grid, .doctor__grid, .steps__card { gap: var(--space-7); }
+}
+@media (max-width: 560px) {
+  .section, .section-soft { padding: var(--space-8) 0; }
+  .compare { overflow-x: auto; }
+  .compare__row > * { padding: var(--space-3); }
 }
