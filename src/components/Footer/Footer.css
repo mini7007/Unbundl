@@ -1,66 +1,15 @@
-.footer {
-  background: #121a19;
-  color: #fff;
-  padding: 7rem 0 0;
-}
-.footer__grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr;
-  gap: 5rem;
-}
-.footer h2 {
-  font-size: 2.4rem;
-}
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: #fff;
-  text-decoration: none;
-  margin: 1.8rem 0;
-  font-size: 1.6rem;
-}
-.footer a:hover {
-  color: #c8a8ff;
-}
-.socials {
-  display: flex;
-  gap: 2.4rem;
-}
-.socials a {
-  font-size: 3rem;
-}
-.sticky-book {
-  position: sticky;
-  bottom: 0;
-  background: #fff;
-  color: var(--ink);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2.4rem;
-  align-items: center;
-  padding: 1.2rem 7vw;
-  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.08);
-}
-.sticky-book .button {
-  text-decoration: none;
-  margin: 0;
-  text-align: center;
-}
-.button--ghost {
-  border: 1px solid #c8c4d2;
-  color: var(--ink);
-  background: #f7f4ff;
-}
+.footer { background: #121a19; color: #fff; padding: var(--space-10) 0 0; }
+.footer__grid { display: grid; grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr; gap: var(--space-9); padding-bottom: var(--space-8); }
+.footer h2 { font-size: var(--font-xl); line-height: 1.2; margin: 0 0 var(--space-4); }
+.footer a { display: flex; align-items: center; gap: var(--space-3); color: #fff; text-decoration: none; margin: 1.4rem 0; font-size: var(--font-md); line-height: 1.35; transition: color 0.2s ease; }
+.footer a:hover { color: #c8a8ff; }
+.socials { display: flex; gap: var(--space-5); }
+.socials a { font-size: 3rem; margin-top: 0; }
+.sticky-book { position: sticky; bottom: 0; background: #fff; color: var(--color-ink); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-6); align-items: center; padding: var(--space-3) max(7vw, 2rem); box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.08); z-index: 5; }
+.sticky-book strong { font-size: var(--font-lg); line-height: 1.25; }
+.sticky-book .button { text-decoration: none; margin: 0; text-align: center; justify-content: center; }
 @media (max-width: 800px) {
-  .footer__grid,
-  .sticky-book {
-    grid-template-columns: 1fr;
-  }
-  .footer {
-    padding-top: 4rem;
-  }
-  .sticky-book {
-    position: static;
-  }
+  .footer { padding-top: var(--space-8); }
+  .footer__grid, .sticky-book { grid-template-columns: 1fr; gap: var(--space-5); }
+  .sticky-book { position: static; padding: var(--space-5) 1.6rem; }
 }
